@@ -100,26 +100,20 @@ export function HeroSection() {
             isVisible ? "animate-fade-in" : "opacity-0"
           }`}
         >
-          <div className="glass-effect rounded-xl p-6 hover-lift">
-            <Users className="h-8 w-8 text-accent mx-auto mb-3" />
-            <div className="text-2xl font-bold text-primary-foreground mb-1">
-              50,000+
-            </div>
-            <div className="text-primary-foreground/70">Habitants</div>
+          <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/30 backdrop-blur-sm border border-orange-400/30 rounded-xl p-6 hover-lift hover:shadow-xl transition-all duration-300">
+            <Users className="h-8 w-8 text-orange-500 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white mb-1">50,000+</div>
+            <div className="text-white/80">Habitants</div>
           </div>
-          <div className="glass-effect rounded-xl p-6 hover-lift">
-            <Award className="h-8 w-8 text-success mx-auto mb-3" />
-            <div className="text-2xl font-bold text-primary-foreground mb-1">
-              25+
-            </div>
-            <div className="text-primary-foreground/70">Projets Réalisés</div>
+          <div className="bg-gradient-to-br from-green-500/20 to-green-600/30 backdrop-blur-sm border border-green-400/30 rounded-xl p-6 hover-lift hover:shadow-xl transition-all duration-300">
+            <Award className="h-8 w-8 text-green-500 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white mb-1">25+</div>
+            <div className="text-white/80">Projets Réalisés</div>
           </div>
-          <div className="glass-effect rounded-xl p-6 hover-lift">
-            <MapPin className="h-8 w-8 text-accent mx-auto mb-3" />
-            <div className="text-2xl font-bold text-primary-foreground mb-1">
-              1
-            </div>
-            <div className="text-primary-foreground/70">Vision Commune</div>
+          <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 hover-lift hover:shadow-xl transition-all duration-300">
+            <MapPin className="h-8 w-8 text-blue-500 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white mb-1">1</div>
+            <div className="text-white/80">Vision Commune</div>
           </div>
         </div>
 
