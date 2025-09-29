@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export function InteractiveGallerySection() {
-  const [activeFilter, setActiveFilter] = useState("all")
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const categories = [
     { id: "all", name: "Toutes", count: 24 },
@@ -13,20 +13,20 @@ export function InteractiveGallerySection() {
     { id: "projets", name: "Projets", count: 6 },
     { id: "rencontres", name: "Rencontres", count: 5 },
     { id: "culture", name: "Culture", count: 5 },
-  ]
+  ];
 
   const galleryItems = [
     {
       id: 1,
       category: "inaugurations",
-      image: "/inauguration-march--central-zu-noula.jpg",
+      image: "/images/maire-zenoula.jpg",
       title: "Inauguration du marché central",
       badge: "Inaugurations",
     },
     {
       id: 2,
       category: "rencontres",
-      image: "/rencontre-d-put--maire-population-zu-noula.jpg",
+      image: "/images/depute-maire-zuenoula.jpg",
       title: "Rencontre avec la population",
       badge: "Rencontres",
     },
@@ -40,7 +40,7 @@ export function InteractiveGallerySection() {
     {
       id: 4,
       category: "inaugurations",
-      image: "/placeholder-7mxl6.png",
+      image: "/images/maire-zenoula.jpg",
       title: "Inauguration d'une école",
       badge: "Inaugurations",
     },
@@ -61,7 +61,7 @@ export function InteractiveGallerySection() {
     {
       id: 7,
       category: "rencontres",
-      image: "/assembl-e-g-n-rale-mairie-zu-noula.jpg",
+      image: "/images/depute-maire-zuenoula.jpg",
       title: "Assemblée générale",
       badge: "Rencontres",
     },
@@ -75,23 +75,27 @@ export function InteractiveGallerySection() {
     {
       id: 9,
       category: "projets",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/construction-project-infrastructure-ivory-coast.jpg",
       title: "Construction centre de santé",
       badge: "Projets",
     },
-  ]
+  ];
 
   const filteredItems =
-    activeFilter === "all" ? galleryItems : galleryItems.filter((item) => item.category === activeFilter)
+    activeFilter === "all"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
     <section className="py-16 bg-gradient-to-br from-orange-500 via-orange-400 to-green-500">
       {/* Header avec gradient */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Galerie Photo</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Galerie Photo
+        </h1>
         <p className="text-xl text-white/90 max-w-4xl mx-auto px-4">
-          Découvrez en images les temps forts de la vie municipale, les projets réalisés et les moments de convivialité
-          avec la population
+          Découvrez en images les temps forts de la vie municipale, les projets
+          réalisés et les moments de convivialité avec la population
         </p>
       </div>
 
@@ -114,7 +118,9 @@ export function InteractiveGallerySection() {
                 <Badge
                   variant="secondary"
                   className={`${
-                    activeFilter === category.id ? "bg-orange-100 text-orange-700" : "bg-white/20 text-white"
+                    activeFilter === category.id
+                      ? "bg-orange-100 text-orange-700"
+                      : "bg-white/20 text-white"
                   } text-xs`}
                 >
                   {category.count}
@@ -141,7 +147,10 @@ export function InteractiveGallerySection() {
 
                 {/* Badge de catégorie */}
                 <div className="absolute top-3 left-3">
-                  <Badge variant="secondary" className="bg-white/90 text-gray-800 backdrop-blur-sm">
+                  <Badge
+                    variant="secondary"
+                    className="bg-white/90 text-gray-800 backdrop-blur-sm"
+                  >
                     {item.badge}
                   </Badge>
                 </div>
@@ -156,5 +165,5 @@ export function InteractiveGallerySection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

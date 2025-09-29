@@ -123,7 +123,7 @@ export function AboutSection() {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depute-maire-zuenoula.jpg-VERCz3KnUdkS0F7bRRlNZ8KIh30I6v.jpeg"
                   alt="Dje Bi Dje Olivier Vamy"
-                  className="relative w-full h-80 object-cover rounded-2xl shadow-2xl"
+                  className="relative w-full h-96 object-contain rounded-2xl shadow-2xl bg-white"
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2">
                   <p className="font-semibold text-gray-900">
